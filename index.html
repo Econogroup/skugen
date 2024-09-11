@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic SKU Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toggle-container">
+            <label class="toggle-switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <h1>Basic SKU Generator</h1>
+        <form id="skuForm">
+            <select id="category" required>
+                <option value="">Select a category</option>
+                <option value="MOT">Motors</option>
+                <option value="ELE">Electronics</option>
+                <option value="COL">Collectibles & Art</option>
+                <option value="HOM">Home & Garden</option>
+                <option value="FAS">Fashion</option>
+                <option value="TOY">Toys</option>
+                <option value="SPO">Sporting Goods</option>
+                <option value="BUS">Business & Industrial</option>
+                <option value="JEW">Jewelry & Watches</option>
+                <option value="BOO">Books</option>
+                <option value="MOV">Movies</option>
+                <option value="MUS">Music</option>
+                <option value="VID">Video Games & Consoles</option>
+            </select>
+            <input type="text" id="numericCode" placeholder="Enter UPC or 5-digit number (optional)">
+            <h2>Shelf Selection</h2>
+            <div class="radio-group" id="shelfSelect">
+                <div class="radio-option">
+                    <input type="radio" id="shelfA" name="shelf" value="a">
+                    <label for="shelfA">A</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="shelfB" name="shelf" value="b">
+                    <label for="shelfB">B</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="shelfC" name="shelf" value="c">
+                    <label for="shelfC">C</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="shelfD" name="shelf" value="d">
+                    <label for="shelfD">D</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="shelfE" name="shelf" value="e">
+                    <label for="shelfE">E</label>
+                </div>
+            </div>
+            <h2>Generate SKU codes</h2>
+            <div class="generate-row">
+                <input type="number" id="quantity" min="1" max="100" value="1" required>
+                <button type="submit">Generate</button>
+            </div>
+        </form>
+        <div id="result"></div>
+        <button id="copyButton">Copy to Clipboard</button>
+        <h2>Export codes (optional)</h2>
+        <div class="radio-group" id="exportSelect">
+            <div class="radio-option">
+                <input type="radio" id="exportGoogle" name="export" value="google">
+                <label for="exportGoogle">Google Sheets</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="exportExcel" name="export" value="excel">
+                <label for="exportExcel">Spreadsheet</label>
+            </div>
+        </div>
+        <button id="exportButton">Export</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

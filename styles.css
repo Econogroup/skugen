@@ -1,0 +1,214 @@
+:root {
+    --primary-color: #D3691F;
+    --secondary-color: #F5A461;
+    --accent-color: #FEA400;
+    --background-color: #ffffff;
+    --text-color: #333;
+    --button-color: #D3691F;
+    --button-hover-color: #FEA400;
+    --button-hover-text: #000000;
+    --outline-color: #D3691F;
+}
+
+.dark-mode {
+    --primary-color: #FEA400;
+    --secondary-color: #F5A461;
+    --accent-color: #D3691F;
+    --background-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --button-color: #FEA400;
+    --button-hover-color: #F5A461;
+    --button-hover-text: #000000;
+    --outline-color: #FEA400;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+select, input, button, #result {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--outline-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-hover-text);
+    font-weight: bold;
+}
+
+#result {
+    min-height: 50px;
+    height: auto;
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    overflow-y: auto;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #FEA400;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.radio-group {
+    display: flex;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 0.25rem;
+    display: none;
+}
+
+.radio-option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.radio-option label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 2px solid var(--outline-color);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.radio-option input[type="radio"]:checked + label::before {
+    background-color: var(--accent-color);
+    box-shadow: inset 0 0 0 4px var(--background-color);
+}
+
+.generate-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.generate-row input, .generate-row button {
+    width: 48%;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.action-buttons button {
+    width: 100%;
+}
+
+#copyButton, #exportButton {
+    background-color: var(--button-color);
+}
+
+#copyButton:hover, #exportButton:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-hover-text);
+    font-weight: bold;
+}
