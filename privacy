@@ -1,0 +1,24 @@
+Privacy Policy
+
+Effective Date: September 11, 2024
+
+1. Introduction
+This Privacy Policy outlines how [Your Website Name] collects and uses your information when you use our SKU Generator web application.
+
+2. Information We Collect
+Our SKU Generator does not collect any personal information from you.
+
+3. Sharing Your Information
+We do not share any information with third parties.
+
+4. Google API and Client ID
+To allow users to export data to Google Sheets, we obtain an API key and Client ID from Google. This information is used solely for the purpose of enabling this functionality and is not shared with any other third parties.
+
+5. Security
+We implement reasonable security measures to protect the API key and Client ID from unauthorized access, disclosure, alteration, or destruction.
+
+6. Changes to this Privacy Policy
+We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting a new version on our website.   
+
+7. Contact Us
+If you have any questions about this Privacy Policy or our practices, please contact us at [Your Email Address].
